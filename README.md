@@ -1,2 +1,2 @@
 # clickAnimation
-a click animaiton using JQery animation function
+a click animaiton using JQuery animation function
