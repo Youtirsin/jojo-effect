@@ -18,6 +18,15 @@ function clickAnime(e){
     $(".content").animate({
         "left":"+=20px",
         "top":"-=50px"
+    },400,"linear");
+    $(".content").animate({
+        "opacity":"1",
+        "left":"-=30px",
+        "top":"-=50px"
+    },400,"linear");
+    $(".content").animate({
+        "left":"+=20px",
+        "top":"-=50px"
     },400,"linear",function(){
         $("#Container").html("");
     });
