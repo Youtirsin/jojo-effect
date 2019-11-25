@@ -8,26 +8,27 @@ function getPos(e){
 };
 function clickAnime(e){
     var Pos=getPos(e);
-    var jojo='<div class="content" style="left:'+(Pos[0]-25)+'px;top:'+(Pos[1]-25)+'px;">ゴ</div>';
-    $("#Container").html(jojo);
-    $(".content").animate({
+    var $jojo='<div class="content" style="left:'+(Pos[0]-25)+'px;top:'+(Pos[1]-25)+'px;">ゴ</div>';
+    $("#Container").append($jojo);
+    var target=$("#Container").children(":last-child");
+    target.animate({
         "opacity":"1",
         "left":"-=30px",
         "top":"-=50px"
     },400,"linear");
-    $(".content").animate({
+    target.animate({
         "left":"+=20px",
         "top":"-=50px"
     },400,"linear");
-    $(".content").animate({
+    target.animate({
         "opacity":"1",
         "left":"-=30px",
         "top":"-=50px"
     },400,"linear");
-    $(".content").animate({
+    target.animate({
         "left":"+=20px",
         "top":"-=50px"
     },400,"linear",function(){
-        $("#Container").html("");
+        target.remove();
     });
 };

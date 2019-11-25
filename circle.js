@@ -8,22 +8,23 @@ function getPos(e){
 };
 function clickAnime(e){
     var Pos=getPos(e);
-    var circle='<div class="cir" style="left:'+(Pos[0])+'px;top:'+(Pos[1])+'px;"></div>';
-    $("#Container").html(circle);
-    $(".cir").animate({
+    var $circle='<div class="cir" style="left:'+(Pos[0])+'px;top:'+(Pos[1])+'px;"></div>';
+    $("#Container").html($circle);
+    var target=$("#Container").children(":last-child");
+    target.animate({
         "width": "50px",
         "height": "50px",
         "opacity":"1",
         "left":"-=25px",
         "top":"-=25px"
     },150,"linear");
-    $(".cir").animate({
+    target.animate({
         "width": "100px",
         "height": "100px",
         "opacity":"0",
         "left":"-=25px",
         "top":"-=25px"
     },150,"linear",function(){
-        $("#Container").html("");
+        target.remove();
     });
 };
