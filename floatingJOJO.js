@@ -27,7 +27,7 @@ function createJo(){
             "top":"-=50px",
             "font-size":"+=5px"
         },400,"linear");
-        if(parseInt(target.css("top"))<=-50){
+        if(parseInt(target.css("top"))<=0-target.height()){
             target.remove();
             clearInterval(floating);
         }
