@@ -8,7 +8,7 @@ function getPos(e){
 };
 function clickAnime(e){
     var Pos=getPos(e);
-    var $jojo='<div class="content" style="left:'+(Pos[0]-25)+'px;top:'+(Pos[1]-25)+'px;">づ</div>';
+    var $jojo='<div class="content" style="left:'+(Pos[0]-25)+'px;top:'+(Pos[1]-25)+'px;">ゴ</div>';
     $("#Container").append($jojo);
     var target=$("#Container").children(":last-child");
     target.animate({
